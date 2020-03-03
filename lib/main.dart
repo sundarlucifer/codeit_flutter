@@ -1,4 +1,4 @@
-import 'package:codeit/screens/login.dart';
+import 'package:codeit/screens/login_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -6,8 +6,9 @@ void main() {
     new MaterialApp(
       title: 'Codeit',
       theme: ThemeData(
-          primaryColor: Colors.redAccent,
-          scaffoldBackgroundColor: Colors.grey[40]),
+        primaryColor: Color(0xffFF8787),
+        scaffoldBackgroundColor: Colors.white,
+      ),
       debugShowCheckedModeBanner: false,
       home: LoginScreen(),
     ),

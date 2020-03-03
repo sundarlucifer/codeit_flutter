@@ -12,7 +12,7 @@ dependencies:
 
   cupertino_icons: ^0.1.2
 
-  curved_navigation_bar:
+  flutter_svg:
 
 dev_dependencies:
   flutter_test:
