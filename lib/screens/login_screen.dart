@@ -1,12 +1,11 @@
-import 'package:codeit/screens/home_screen.dart';
+import 'package:codeit/blocs/auth/auth_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class LoginScreen extends StatelessWidget {
   void _loginUser(context) {
-    // TODO: Change to pushReplacement
-    Navigator.push(
-        context, MaterialPageRoute(builder: (context) => HomeScreen()));
+    BlocProvider.of<AuthBloc>(context).add(SignIn());
   }
 
   @override
@@ -108,7 +107,7 @@ class LoginScreen extends StatelessWidget {
               child: Image(
                 width: 34.0,
                 height: 34.0,
-                image: AssetImage('assets/images/google_logo.png'),
+                image: AssetImage('assets/images/logo_google.png'),
               ),
             ),
             Center(

@@ -7,7 +7,7 @@
          FlutterApplication and put your custom class here. -->
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="codeit_progress_tracker"
+        android:label="Codeit App"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"
