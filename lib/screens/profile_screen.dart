@@ -1,4 +1,6 @@
+import 'package:codeit/blocs/auth/auth_bloc.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ProfileScreen extends StatefulWidget {
   @override
@@ -6,6 +8,11 @@ class ProfileScreen extends StatefulWidget {
 }
 
 class _ProfileScreenState extends State<ProfileScreen> {
+
+  _signOut(BuildContext context) {
+    BlocProvider.of<AuthBloc>(context).add(SignOut());
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,6 +29,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             backgroundColor: Theme.of(context).primaryColor,
             radius: 50.0,
           ),
+          FlatButton(child: Text('Sign Out'), onPressed: () => _signOut(context),)
         ],
       ),
     );
